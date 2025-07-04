@@ -35,7 +35,7 @@ TensorboardX==2.6.2.2
 1. Clone this git repository: `git clone https://github.com/anxuanhan/ProGENIE.git`
 2. `cd ProGENIE`
 3. Create a conda environment: `conda create -n progenie python=3.10.0`
-4. `conda activate progenie
+4. `conda activate progenie`
 5. Install the required package dependencies: `pip install -r requirements.txt`
 
 
