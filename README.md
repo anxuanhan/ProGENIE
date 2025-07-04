@@ -9,14 +9,32 @@
   <img src="https://github.com/anxuanhan/ProGENIE/blob/main/pics/model_architecture.png" alt="model architecture" width="600"/>
 </p>
 
-## Folder structure
-
 ## Pre-requisites
+- Linux (Tested on Red Hat Enterprise Linux 8.4)
+- NVIDIA GPU (Tested on NVIDIA A100 PCIe 40GB)
+- Python (Python 3.10.0),
+PyTorch==1.13.1+cu116,
+Torchvision==0.14.1+cu116,
+Torchaudio==0.13.1+cu116,
+Matplotlib==3.10.1,
+NumPy==1.23.5,
+OpenCV-Python==4.11.0.86,
+Openslide-Python==1.4.1,
+Pandas==2.2.3,
+Scikit-Image==0.25.2,
+Scikit-Learn==1.6.1,
+SciPy==1.15.2,
+Seaborn==0.13.2,
+Einops==0.8.1,
+Transformers==4.49.0,
+Timm==1.0.3,
+Tensorboard==2.19.0,
+TensorboardX==2.6.2.2
 
 ## Installation Guide for Linux (using anaconda)
 1. Clone this git repository: `git clone https://github.com/anxuanhan/ProGENIE.git`
 2. `cd ProGENIE`
-3. Create a conda environment: `conda create -n progenie python=3.9`
+3. Create a conda environment: `conda create -n progenie python=3.10.0`
 4. `conda activate progenie
 5. Install the required package dependencies: `pip install -r requirements.txt`
 
@@ -84,11 +102,11 @@ The output will be saved in: `examples/results`
 
 This includes:
 
-test_pred_labels.csv: predicted gene expression values
+- test_pred_labels.csv: predicted gene expression values
 
-test_true_labels.csv: ground truth labels
+- test_true_labels.csv: ground truth labels
 
-test_gene_metrics.csv: PCC, RMSE, and R²
+- test_gene_metrics.csv: PCC, RMSE, and R²
 
 
 
