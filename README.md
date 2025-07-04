@@ -19,22 +19,47 @@
 5. Install the required package dependencies: `pip install -r requirements.txt`
 
 
-## 准备工作
-1. 准备wsi文件夹，里面储存着WSI文件
-2. 在example文件夹下，准备ref_file.csv文件，eg.
+## Preparation
+1. Prepare the `wsi/` directory, which contains the whole slide images
+2. Prepare the reference file: `example/ref_file.csv`
 
-| WSI File Name      | Patient ID       | rna_KRT5 | rna_ACTB | ...       | rna_SCGB2A1  | tcga_project |
+  For example:
+
+| WSI File Name      | Patient ID       | rna_A1BG | rna_A2M | ...       | rna_ZZZ3  | tcga_project |
 |-------------------|------------------|----------|----------|-----------|------------|---------------|
-| TCGA-2A-A8VL-01A  | TCGA-2A-A8VL-01A | 5.534787 | 9.443552 | ...       | 2.650512  | TCGA-PRAD     |
-| TCGA-2A-A8VO-01A  | TCGA-2A-A8VO-01A | 0.213876 | 9.519404 | ...       | 0.9438838 | TCGA-PRAD     |
-| TCGA-2A-A8VT-01A  | TCGA-2A-A8VT-01A | 4.868341 | 8.809999 | ...       | 1.121745 | TCGA-PRAD     |
+| TCGA-2A-A8VL-01A  | TCGA-2A-A8VL-01A | 0.0658   | 5.1469 | ...       | 2.4027  | TCGA-PRAD     |
+| TCGA-2A-A8VO-01A  | TCGA-2A-A8VO-01A | 0.0243   | 7.0980  | ...       | 2.5807 | TCGA-PRAD     |
+| TCGA-2A-A8VT-01A  | TCGA-2A-A8VT-01A | 0.0195   | 5.5461 | ...       | 3.6254 | TCGA-PRAD     |
+
+3. Prepare the ground truth label file: `examples/true_label.csv`
+   
 
 ## Preprocessing
-1.创建patch
-2.提取patch特征
-3.得到k-Means features
+**1. Create patches from WSIs**
+   
+   To extract image patches from raw Whole Slide Images (WSIs), run the patch generation script provided in: `pre_processing/create_patches.py`
+   
+   An example script to run the patch extraction: `scripts/create_patches.sh`
+   
+**2. Extract Features from Patches**
 
-## download pre-trained model on an independent datase
+   To extract features from patches using a pretrained encoder, run the feature extraction script provided in: `pre_processing/extract_patch_features.py`
+   
+   An example script to run the feature extraction:`scripts/extract_patches_features.sh`
+   
+**3. Obtain k-Means Features**
+
+  To compute k-Means features from extracted patch features, run the clustering script provided in: `pre_processing/kmean_features.py`
+
+  An example script to run the k-Means clustering: `scripts/kmean_features.sh`
+
+## Inferrence on independent dataset
+We released the model weights for four pre-trained models on [HuggingFace](https://huggingface.co/ananananxuan/ProGENIE/tree/main "HuggingFace"), please download the weights first.
+
+
+
+
+
 
 
 
