@@ -5,7 +5,7 @@
 *Prostate cancer exhibits complex heterogeneity, requiring costly sequencing to characterize its diversity for precision medicine. While deep learning on whole slide images (WSIs) has shown promise in clinically relevant questions, transcriptomic prediction focused on prostate cancer remains limited. Here, we develop ProGENIE, a multi-head attention-pooling framework directly predicting gene expression in prostate cancer from WSIs. Trained on The Cancer Genome Atlas (TCGA) dataset, ProGENIE demonstrates strong generalizability on an independent cohort from South Australian Hospitals (SAH), achieving a median Pearson correlation coefficient (PCC) close to 0.6 for the top 1,000 genes and accurately predicting 3,167 genes with PCC > 0.4. ProGENIE accurately predicts gene expression associated with prostate cancer development and reliably characterizes the tumor microenvironment. Furthermore, the predicted transcriptomic profiles strongly correlate with drug sensitivity and immunotherapy response. This cost-effective approach links tissue morphology to molecular profiles and supports personalized treatment in prostate cancer.*
 
 ### Overview
-<img src="https://github.com/anxuanhan/ProGENIE/blob/main/model_architecture.png" alt="ChatGPT" width="600"/>
+<img src="https://github.com/anxuanhan/ProGENIE/blob/main/pics/model_architecture.png" alt="model architecture" width="600"/>
 
 ## Folder structure
 
@@ -46,6 +46,14 @@
    To extract features from patches using a pretrained encoder, run the feature extraction script provided in: `pre_processing/extract_patch_features.py`
    
    An example script to run the feature extraction:`scripts/extract_patches_features.sh`
+
+   Note: Pretrained encoder weights (e.g., for UNI, CHIEF, and Prov-GigaPath) can be obtained by referring to the following repositories:
+  
+   - UNI: https://github.com/mahmoodlab/UNI
+
+   - CHIEF: https://github.com/hms-dbmi/CHIEF
+
+   - Prov-GigaPath: https://github.com/prov-gigapath/prov-gigapath
    
 **3. Obtain k-Means Features**
 
@@ -55,6 +63,15 @@
 
 ## Inferrence on independent dataset
 We released the model weights for four pre-trained models on [HuggingFace](https://huggingface.co/ananananxuan/ProGENIE/tree/main "HuggingFace"), please download the weights first.
+
+**1. Prepare the dataset**
+
+To combine the k-Means features with ground truth gene expression profiles for model training, run the dataset preparation script provided in: `pre_processing/prepare_dataset.py`
+
+An example script to run the dataset preparation: `scripts/prepare_dataset.sh`
+
+**2. inferrence and evaluation**
+
 
 
 
