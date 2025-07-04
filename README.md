@@ -45,11 +45,11 @@ TensorboardX==2.6.2.2
 
   For example:
 
-| WSI File Name      | Patient ID       | rna_A1BG | rna_A2M | ...       | rna_ZZZ3  | tcga_project |
-|-------------------|------------------|----------|----------|-----------|------------|---------------|
-| TCGA-2A-A8VL-01A  | TCGA-2A-A8VL-01A | 0.0658   | 5.1469 | ...       | 2.4027  | TCGA-PRAD     |
-| TCGA-2A-A8VO-01A  | TCGA-2A-A8VO-01A | 0.0243   | 7.0980  | ...       | 2.5807 | TCGA-PRAD     |
-| TCGA-2A-A8VT-01A  | TCGA-2A-A8VT-01A | 0.0195   | 5.5461 | ...       | 3.6254 | TCGA-PRAD     |
+| WSI File Name      | Patient ID       | rna_A1BG |  ...       | rna_ZZZ3  | tcga_project |
+|-------------------|------------------|----------|------------|------------|---------------|
+| TCGA-2A-A8VL-01A  | TCGA-2A-A8VL-01A | 0.0658   |  ...       | 2.4027  | TCGA-PRAD     |
+| TCGA-2A-A8VO-01A  | TCGA-2A-A8VO-01A | 0.0243   |  ...       | 2.5807 | TCGA-PRAD     |
+| TCGA-2A-A8VT-01A  | TCGA-2A-A8VT-01A | 0.0195   |  ...       | 3.6254 | TCGA-PRAD     |
 
 3. Prepare the ground truth label file: `examples/true_label.csv`
    
