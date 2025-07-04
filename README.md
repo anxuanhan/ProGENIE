@@ -70,7 +70,23 @@ To combine the k-Means features with ground truth gene expression profiles for m
 
 An example script to run the dataset preparation: `scripts/prepare_dataset.sh`
 
-**2. inferrence and evaluation**
+**2. inference and evaluation**
+
+To perform model inference on the test set and evaluate performance:
+
+Run the main inference and evaluation script:`inference.py`
+
+You can find an example script here:`scripts/inference.sh`
+
+The output will be saved in: `examples/results`
+
+This includes:
+
+test_pred_labels.csv: predicted gene expression values
+
+test_true_labels.csv: ground truth labels
+
+test_gene_metrics.csv: PCC, RMSE, and R²
 
 
 
